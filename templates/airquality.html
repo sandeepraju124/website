@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<section class="page-section" id="contact2">
+            <div class="container">
+                <div class="text-center">
+
+                    <h2 class="section-heading text-uppercase">Air Quality Index</h2>
+                    <h3 class="section-subheading text-muted"> you can check the quality of the air of hyderabad region </h3>
+                </div >
+
+
+
+
+                <form id="contactForm" action="{{url_for('check') }}"  method="post" >
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" name="name5"  type="number" placeholder=" Average Temperature (°C)" required="required" data-validation-required-message="Please enter Average Average Temperature" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="name6"  type="number" placeholder=" Maximum temperature (°C)" required="required" data-validation-required-message="Please enter Average Average Temperature" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="name7"  type="number" placeholder="Minimum temperature (°C)" required="required" data-validation-required-message="Please enter Average Average Temperature" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                             <div class="form-group">
+                                <input class="form-control" name="name8"  type="number" placeholder=" pressure at sea level (hPa)" required="required" data-validation-required-message="Please enter Average Average Temperature" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" name="name"  type="number" placeholder="  relative humidity (%)" required="required" data-validation-required-message="Please enter Average Average Temperature" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="name2"  type="number" placeholder="visibility (Km)" required="required" data-validation-required-message="Please enter Average Average Temperature" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="form-group">
+                                <input class="form-control" name="name3"  type="number" placeholder=" sustained wind speed (Km/h)" required="required" data-validation-required-message="Please enter Average Average Temperature" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                             <div class="form-group">
+                                <input class="form-control" name="name4"  type="number" placeholder=" Average Temperature (°C)" required="required" data-validation-required-message="Please enter Average Average Temperature" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div id="success"></div>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">check</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+<div class="col-lg-12 text-center">
+                        <h2 class="mt-0">Air Quality Index</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-muted mb-5">{{ msg }}</p>
+                    </div>
+
+
+{% endblock %}
