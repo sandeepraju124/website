@@ -29,8 +29,6 @@ def projects():
 
 
 
-
-
 @app.route('/airquality')
 def airquality():
     return render_template("airquality.html")
